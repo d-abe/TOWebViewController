@@ -509,6 +509,7 @@
     if (@available(iOS 11.0, *)) {
         UIEdgeInsets insets = UIEdgeInsetsZero;
         insets.top = CGRectGetMaxY(self.navigationBar.frame);
+        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         self.webView.scrollView.contentInset = insets;
         self.webView.scrollView.scrollIndicatorInsets = insets;
     }
